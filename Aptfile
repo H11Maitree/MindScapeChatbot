@@ -1,5 +1,10 @@
-gfortran
+build-essential
 gcc
 g++
+gfortran
+cpp
+libgcc1
+libgfortran5
 libopenblas-dev
 liblapack-dev
+libblas-dev
