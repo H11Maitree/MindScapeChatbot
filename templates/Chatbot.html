@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌸The MindScape Assistant❤️</title>
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet"> 
+    <style>
+        body {
+            font-family: 'Patrick Hand', cursive; /* 🎀 Cute Handwritten Font */
+            background: linear-gradient(to bottom, #C0BE63, #F6AEAE); /* 💚 Green to Pink Gradient */
+            text-align: center;
+            padding: 20px;
+            height: 100vh; /* Ensure it covers the whole screen */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .chat-container {
+            width: 100%;
+            max-width: 400px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+            border: 3px solid #C0BE63; /* Add a soft border */
+        }
+        .messages {
+            height: 300px;
+            overflow-y: auto;
+            border-bottom: 2px dashed #F6AEAE; /* Dashed pink bottom border */
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            text-align: left;
+        }
+        .input-container {
+            display: flex;
+        }
+        input {
+            flex: 1;
+            padding: 10px;
+            border: 2px solid #F6AEAE;
+            border-radius: 10px;
+            font-family: 'Patrick Hand', cursive;
+        }
+        button {
+            padding: 10px;
+            background-color: #C0BE63;
+            color: white;
+            font-family: 'Patrick Hand', cursive;
+            font-size: 16px;
+            border: none;
+            border-radius: 10px;
+            margin-left: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #A5A55C;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="chat-container">
+        <h2>🌸 The MindScape Assistant ❤️</h2>
+        <div class="messages" id="messages"></div>
+        <div class="input-container">
+            <input type="text" id="userInput" placeholder="พิมพ์ข้อความที่นี่...">
+            <button onclick="sendMessage()">ส่ง</button>
+        </div>
+    </div>
+
+    <!-- 🔥 เชื่อมต่อ JavaScript ภายนอก -->
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+
+
+</body>
+</html>
